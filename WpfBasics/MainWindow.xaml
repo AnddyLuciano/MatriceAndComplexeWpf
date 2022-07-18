@@ -1,0 +1,72 @@
+﻿<Window x:Class="WpfBasics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBasics"
+        mc:Ignorable="d"
+        Title="ComplexeOrMatrice" Height="400" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Function choice-->
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  Content="Choisir la fonction :" Background="#FFD8AC4D" Foreground="White" FontFamily="Century Gothic" FontSize="15"/>
+
+        <ComboBox x:Name="select" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="21" Margin="0 -20 0 0" Visibility="Visible" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem x:Name="matrice" Content="Matrice"/>
+            <ComboBoxItem x:Name="complexe" Content="Complexe"/>
+        </ComboBox>
+
+        <!-- Output-->
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <TextBox x:Name="txtDisplay" IsReadOnly="True" Background="#FFF3EEE2" FontSize="25"></TextBox>
+        </Border>
+
+        <!--grid button-->
+        <Button x:Name="btn7" Grid.Row="0" Grid.Column="2" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn7_Click" Visibility="Visible">7
+        </Button>
+        <Button x:Name="btn8" Grid.Row="0" Grid.Column="3" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn8_Click" Visibility="Visible">8
+        </Button>
+        <Button x:Name="btn9" Grid.Row="0" Grid.Column="4" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn9_Click" Visibility="Visible">9
+        </Button>
+        <Button x:Name="btn4" Grid.Row="1" Grid.Column="2" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn4_Click" Visibility="Visible">4
+        </Button>
+        <Button x:Name="btn5" Grid.Row="1" Grid.Column="3" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn5_Click" Visibility="Visible">5
+        </Button>
+        <Button x:Name="btn6" Grid.Row="1" Grid.Column="4" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn6_Click" Visibility="Visible">6
+        </Button>
+        <Button x:Name="btn1" Grid.Row="2" Grid.Column="2" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn1_Click" Visibility="Visible">1
+        </Button>
+        <Button x:Name="btn2" Grid.Row="2" Grid.Column="3" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn2_Click" Visibility="Visible">2
+        </Button>
+        <Button x:Name="btn3" Grid.Row="2" Grid.Column="4" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn3_Click" Visibility="Visible">3
+        </Button>
+        <Button x:Name="btnPlus" Grid.Row="0" Grid.Column="5" Grid.RowSpan="2" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Visibility="Visible" Click="btnPlus_Click">+
+        </Button>
+        <Button x:Name="btnClear" Grid.Row="2" Grid.Column="5"  Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Visibility="Visible" Click="btnClear_Click">CLEAR
+        </Button>
+        <Button x:Name="btnEnter" Grid.Row="3" Grid.Column="5" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Visibility="Visible" Click="btnEnter_Click">ENTER
+        </Button>
+        <Button x:Name="btn0" Grid.Row="3" Grid.Column="2" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Click="btn0_Click" Visibility="Visible">0
+        </Button>
+        <Button x:Name="btnSpace" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Margin="20 20 20 20" Background="#FFFFF1CC" FontSize="16" FontFamily="Lucida Console" Visibility="Visible" Click="btnSpace_Click">SPACE
+        </Button>
+
+    </Grid>
+
+</Window>
